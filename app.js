@@ -112,7 +112,7 @@ if(stagesList.style.display == "none" ){
          arrowHidden.style.display = 'block';
         arrowVisible.style.display = 'none';
     } else {
-        console.log(22)
+        // console.log(22)
  arrowHidden.style.display = 'none';
         arrowVisible.style.display = 'block';
       
@@ -120,5 +120,128 @@ if(stagesList.style.display == "none" ){
 console.log("check check")
 }
 
+
+
+function toggleDetails(element) {
+    var details = element.querySelector('.card-content');
+
+    var allDetails = document.querySelectorAll('.stages-list li .card-content');
+  
+    var activeStage = document.querySelector('.stages-list li.active');
+
+        allDetails.forEach(function(item) {
+            if (item !== details) {
+                item.style.display = 'none';
+           
+
+            }else{
+                console.log("yollo")
+console.log(details.style.display )
+            if(details.style.display == 'none' || details.style.display == ''){
+                details.style.display ='inline-flex'
+                element.classList.add('active');
+        
+            }else{
+                element.classList.remove('active');
+            }
+            }
+            
+           
+      
+    });
+     // Remove 'active' class from previously active stage
+      
+    if (activeStage && activeStage !== element) {
+        activeStage.classList.remove('active');
+    }
+   
+
+}
+
+
+// function toggleDetailsTick(element) {
+//     var listItem = element.closest('li');
+//     toggleDetails(listItem); // Toggle the details for the clicked stage
+//     var loadingSvg = listItem.querySelector('.loading-svg');
+//     var initialSvg = listItem.querySelector('.initial-svg');
+//     var tickSvg = listItem.querySelector('.tick-svg');
+
+//     loadingSvg.style.display = 'inline-block';
+//     initialSvg.style.display = 'none';
+
+//     setTimeout(function () {
+//         loadingSvg.style.display = 'none';
+//         tickSvg.style.display = 'inline-block';
+//         initialSvg.style.display = 'none';
+//         //listener to remove the tick svg if clicked on
+//         tickSvg.addEventListener('click', function() {
+//             resetSvg(listItem);
+//             updateProgress();
+//         });
+//     }, 500);
+// }
+function toggleDetailsTick(element) {
+    var listItem = element.closest('li');
+    toggleDetails(listItem); // Toggle the details for the clicked stage
+
+    var loadingSvg = listItem.querySelector('.loading-svg');
+    var initialSvg = listItem.querySelector('.initial-svg');
+    var tickSvg = listItem.querySelector('.tick-svg');
+
+    loadingSvg.style.display = 'inline-block';
+    initialSvg.style.display = 'none';
+
+    setTimeout(function () {
+        loadingSvg.style.display = 'none';
+        tickSvg.style.display = 'inline-block';
+        initialSvg.style.display = 'none';
+
+        // Listener to remove the tick svg if clicked on
+        tickSvg.addEventListener('click', function () {
+            resetSvg(listItem);
+            updateProgress(); // Update progress after removing tick
+        });
+        
+        updateProgress(); // Update progress after ticking
+    }, 500);
+}
+
+function resetSvg(element) {
+    var initialSvg = element.querySelector('.initial-svg');
+    var tickSvg = element.querySelector('.tick-svg');
+    initialSvg.style.display = 'inline-block';
+    tickSvg.style.display = 'none';
+}
+
+function updateProgress() {
+    var allTickSvg = document.querySelectorAll('.tick-svg');
+    var totalStages = 5; // Set the total number of stages here
+    var completedStages = 0;
+
+    // Count the number of ticked stages
+    allTickSvg.forEach(function (tickSvg) {
+    console.log(tickSvg.style.display);
+    if (tickSvg.style.display == 'inline-block' ) {
+        completedStages++;
+    }
+
+
+    });
+    console.log(completedStages);
+
+
+    // Update progress rate text
+    var progressRate = document.querySelector('.progress-rate');
+    var progressBar = document.querySelector('.progress-indicator');
+
+    // Calculate progress percentage
+    var progressPercentage = (completedStages / totalStages) * 100;
+
+    // Update progress rate text
+    progressRate.textContent = `${completedStages}/${totalStages} completed`;
+
+    // Update progress bar width
+    progressBar.style.width = `${progressPercentage}%`;
+}
 
 
