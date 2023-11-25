@@ -1,4 +1,5 @@
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #F1F1F1;
@@ -93,6 +94,9 @@ body {
     color: #E3E3E3;
     padding: 10px;
 }
+
+
+
 
 .notification-dropdown {
     position: absolute;
