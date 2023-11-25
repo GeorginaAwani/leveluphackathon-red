@@ -1,9 +1,9 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #F1F1F1;
 }
+
 
 .navbar {
     background-color: #1C181D;
@@ -56,9 +56,13 @@ body {
     border-radius: 10px;
 }
 
+/* li{
+ width:100%;
+} */
 .user-actions {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .user-menu-profile {
@@ -125,9 +129,11 @@ body {
 }
 
 .user-menu {
+
     position: absolute;
     top: 100%;
     right: 0;
+    z-index: 1000;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -135,6 +141,7 @@ body {
     display: none;
     width: max-content;
 }
+
 
 .user-menu.show {
     display: block;
@@ -152,6 +159,8 @@ body {
     margin-right: 5px;
     border-radius: 10px;
     cursor: pointer;
+    background-color: #fff;
+
     /* border-bottom: 1px solid #ccc; */
     color: #475467;
     transition: background-color 0.3s;
@@ -248,6 +257,7 @@ body {
 
 .user-actions.user-profile.open-menu {
     background-color: #616161;
+
 }
 
 .user-actions.user-profile.close-menu {
@@ -256,6 +266,7 @@ body {
 }
 
 .user-actions.user-profile {
+
     transition: background-color 0.3s;
 }
 
@@ -352,7 +363,7 @@ body {
 
 .setup-guide-section {
     /* width: 100%; */
-    height: 503px;
+    /* height: 503px; */
     /* top: 88px; */
     left: 320px;
     gap: 16px;
@@ -362,7 +373,7 @@ body {
     display: block;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #ccc;
+    /* border-bottom: 1px solid #ccc; */
     overflow: hidden;
     padding-bottom: 0px;
     /* margin-bottom: 10px; */
@@ -378,11 +389,13 @@ body {
     font-size: 12px;
 }
 
-
+h5 {
+    margin-left: 10px;
+}
 
 .stages-list li p {
     font-size: 12px;
-    margin-left: 20px;
+    /* margin-left: 10px; */
 }
 
 .setup-name p {
@@ -412,13 +425,13 @@ body {
 .progress-indicator {
     padding: 10px;
     height: 100%;
+    width: 0.5%;
     background-color: #1C181D;
     transition: width 0.3s ease;
 }
 
 .progress-rate {
     width: 50%;
-    /* padd */
 }
 
 .stages-list {
@@ -433,7 +446,7 @@ body {
 }
 
 .stages-list li {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     margin-bottom: 10px;
 }
@@ -450,4 +463,108 @@ body {
 
 .reduce-size {
     transform: scale(0.9);
+}
+
+.stages-list li {
+    /* margin-bottom: 5px; */
+    cursor: pointer;
+}
+
+.stages-list li.active {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+    background-color: #F7F7F7;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 50px;
+}
+
+.card-content {
+    /* flex: 1; */
+    display: none;
+    position: relative;
+    /* padding-top: 20px; */
+    /* margin-top: 20px; */
+    /* padding-bottom: 20px; */
+    width: 100%;
+    padding-right: 50px;
+    /* box-sizing: border-box; */
+}
+
+.card-prt1 {
+    width: 80%;
+}
+
+.card-btn-1 {
+    /* box-shadow: #1C181D;
+    border: 2px solid #000000; */
+}
+
+.card-btn-1:hover {
+
+    background-color: #1C181D;
+}
+
+.card-image {
+    flex: 0 0 20%;
+    max-width: 20%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 50px;
+    margin-bottom: -20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-image {
+        display: none;
+    }
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.learnmore-url {
+    color: #005BD3;
+    text-decoration: none;
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #616161;
+    color: white;
+    border: 2px solid #1C181D;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.list-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: -20px;
+}
+
+.loading-svg,
+.tick-svg {
+    display: none;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-svg {
+    animation: rotate 1s linear infinite;
 }
