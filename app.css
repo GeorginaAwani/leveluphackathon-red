@@ -4,6 +4,9 @@ body {
     padding: 0;
     background-color: #F1F1F1;
 }
+/* *{
+    font
+} */
 
 .navbar {
     background-color: #1C181D; 
@@ -61,6 +64,7 @@ body {
 .user-actions {
     display: flex;
     align-items: center;
+    position: relative;
 }
 .user-menu-profile{
     display: inline-flex;
@@ -123,9 +127,11 @@ font-size: 12px;
     padding: 10px;
 }
 .user-menu {
+    
     position: absolute;
     top: 100%;
     right: 0;
+    z-index: 1000;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -133,6 +139,7 @@ font-size: 12px;
     display: none;
     width: max-content;
 }
+
 
 .user-menu.show {
     display: block;
@@ -150,6 +157,8 @@ font-size: 12px;
     margin-right: 5px;
     border-radius: 10px;
     cursor: pointer;
+    background-color: #fff;
+
     /* border-bottom: 1px solid #ccc; */
     color: #475467;
     transition: background-color 0.3s;
@@ -240,6 +249,7 @@ font-size: 12px;
 
 .user-actions.user-profile.open-menu {
     background-color: #616161; 
+
 }
 .user-actions.user-profile.close-menu{
     background-color: #322F33;
@@ -247,6 +257,7 @@ font-size: 12px;
 }
 
 .user-actions.user-profile {
+    
     transition: background-color 0.3s;
 }
 
@@ -458,7 +469,7 @@ h5{
 }
 
 .card-content {
-    flex: 1;
+    /* flex: 1; */
     display: none;
     position: relative;
     /* padding-top: 20px; */
@@ -531,3 +542,6 @@ padding-right: 50px;
 .loading-svg {
     animation: rotate 1s linear infinite;
 }
+
+
+
