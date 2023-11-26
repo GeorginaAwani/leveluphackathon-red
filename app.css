@@ -649,7 +649,7 @@ a {
 
 @media screen and (max-width:575px) {
 	#navbarSearch {
-		width: 50%;
+		width: 60%;
 	}
 
 	#navbarTag>.dropdown>.btn {
