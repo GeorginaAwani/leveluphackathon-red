@@ -75,8 +75,6 @@ const TRANSITION_DURATION = 200;
 
 	accordionItems.forEach(function (item) {
 		item.addEventListener('click', function (e) {
-			// if target is clickable, do nothing
-			if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A') return;
 
 			if (!(item.classList.contains('show'))) {
 				// close open item
@@ -85,7 +83,42 @@ const TRANSITION_DURATION = 200;
 				item.classList.add('show');
 			}
 			else {
+				// if target is clickable, do nothing
+				if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A' || e.target.tagName === 'svg' || e.target.tagName === 'circle') return;
+
 				item.classList.remove('show');
+			}
+		});
+	});
+})();
+
+// check buttons
+(function () {
+	const checkButtons = document.querySelectorAll('.check-btn');
+
+	function countProgress() {
+		// set progress
+		const count = document.querySelectorAll('.check-btn.active').length;
+		document.getElementById('completedCount').innerText = count;
+
+		const progress = count === 0 ? 0 : (0.2 * count) * 100;
+		document.getElementById('progressIndicator').style.width = progress + '%';
+	}
+
+	checkButtons.forEach(function (button) {
+		button.addEventListener('click', function () {
+			// deactivate
+			if (button.classList.contains('active')) {
+				button.classList.remove('active');
+				countProgress();
+			}
+			else {
+				button.classList.add('loading');
+				setTimeout(() => {
+					button.classList.remove('loading');
+					button.classList.add('active');
+					countProgress();
+				}, (TRANSITION_DURATION * 3));
 			}
 		});
 	});
