@@ -10,12 +10,15 @@
 	<script src="app.js" defer></script>
 </head>
 
-<body>
+<body class="bg-light">
 	<nav id="navbar" class="px-4 py-3 d-flex ai-center bg-dark jc-space-between">
 		<div id="navbarLogo">
-			<img class="d-none d-sm-block" src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg"
-				alt="Desktop Logo">
-			<img class="d-sm-none" src="https://crushingit.tech/hackathon-assets/shopify-icon.svg" alt="Mobile Logo">
+			<a href="https://shopify.come">
+				<img class="d-none d-sm-block" src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg"
+					alt="Desktop Logo">
+				<img class="d-sm-none" src="https://crushingit.tech/hackathon-assets/shopify-icon.svg"
+					alt="Mobile Logo">
+			</a>
 		</div>
 
 		<form action="" method="post" role="search" class="position-relative d-flex ai-center" id="navbarSearch">
@@ -74,7 +77,7 @@
 						</div>
 					</div>
 
-					<div class="p-5">
+					<div class="p-5 bg-light">
 						Alerts about your store and account will show here
 					</div>
 				</div>
@@ -82,13 +85,14 @@
 
 			<div class="dropdown position-relative">
 				<button class="btn br-sm py-1 d-flex ai-center pl-3 pr-1">
-					<span>Davii Collections</span>
-					<div class="ml-3 d-flex jc-center ai-center user-tag">DC</div>
+					<span class="d-none d-sm-block mr-3">Davii Collections</span>
+					<div class="d-flex jc-center ai-center user-tag">DC</div>
 				</button>
 
 				<div class="dropdown-menu ease-in-3 position-absolute py-2 border">
 					<div class="px-2">
-						<a href="/" class="dropdown-menu-item br-sm p-2 d-flex ai-center jc-space-between fw-600"
+						<a href="/"
+							class="dropdown-menu-item br-sm p-2 d-flex ai-center jc-space-between fw-600 bg-light"
 							id="headingMenuItem">
 							<div class="d-flex">
 								<div class="mr-3 d-flex jc-center ai-center user-tag">DC</div>
@@ -158,18 +162,19 @@
 	</nav>
 
 	<div id="container">
-		<div class="alert br-sm bg-dark pl-4 pr-3 py-4 text-light d-flex ai-center jc-space-between mb-5">
-			<div>Extend your trial for $1/month for 3 months on select plans.</div>
+		<div class="alert br-sm bg-dark pl-4 pr-3 py-4 text-light d-flex ai-center jc-space-between mb-5 ease-in-3">
+			<div class="d-flex ai-center jc-space-between flex-fill flex-wrap">
+				<div>Extend your trial for $1/month for 3 months on select plans.</div>
 
-			<div class="d-flex ai-center">
-				<button class="btn btn-light py-2 px-4 mr-3">Select a plan</button>
-				<button class="btn btn-close"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-						viewBox="0 0 20 20" fill="none">
-						<path
-							d="M13.9697 15.0303C14.2626 15.3232 14.7374 15.3232 15.0303 15.0303C15.3232 14.7374 15.3232 14.2626 15.0303 13.9697L11.0607 10L15.0303 6.03033C15.3232 5.73744 15.3232 5.26256 15.0303 4.96967C14.7374 4.67678 14.2626 4.67678 13.9697 4.96967L10 8.93934L6.03033 4.96967C5.73744 4.67678 5.26256 4.67678 4.96967 4.96967C4.67678 5.26256 4.67678 5.73744 4.96967 6.03033L8.93934 10L4.96967 13.9697C4.67678 14.2626 4.67678 14.7374 4.96967 15.0303C5.26256 15.3232 5.73744 15.3232 6.03033 15.0303L10 11.0607L13.9697 15.0303Z"
-							fill="#E3E3E3" />
-					</svg></button>
+				<button class="btn btn-light py-2 px-4 mt-5 mt-sm-0">Select a plan</button>
 			</div>
+
+			<button class="btn btn-close ml-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+					viewBox="0 0 20 20" fill="none">
+					<path
+						d="M13.9697 15.0303C14.2626 15.3232 14.7374 15.3232 15.0303 15.0303C15.3232 14.7374 15.3232 14.2626 15.0303 13.9697L11.0607 10L15.0303 6.03033C15.3232 5.73744 15.3232 5.26256 15.0303 4.96967C14.7374 4.67678 14.2626 4.67678 13.9697 4.96967L10 8.93934L6.03033 4.96967C5.73744 4.67678 5.26256 4.67678 4.96967 4.96967C4.67678 5.26256 4.67678 5.73744 4.96967 6.03033L8.93934 10L4.96967 13.9697C4.67678 14.2626 4.67678 14.7374 4.96967 15.0303C5.26256 15.3232 5.73744 15.3232 6.03033 15.0303L10 11.0607L13.9697 15.0303Z"
+						fill="#E3E3E3" />
+				</svg></button>
 		</div>
 
 		<div class="card br-lg bg-white p-3 border">
@@ -191,8 +196,8 @@
 					</div>
 
 					<button class="btn" id="collapseToggle">
-						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" id="chevron"
-							fill="none">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+							class="ease-in-3" fill="none">
 							<path fill-rule="evenodd" clip-rule="evenodd"
 								d="M5.71967 8.46967C6.01256 8.17678 6.48744 8.17678 6.78033 8.46967L10.25 11.9393L13.7197 8.46967C14.0126 8.17678 14.4874 8.17678 14.7803 8.46967C15.0732 8.76256 15.0732 9.23744 14.7803 9.53033L10.7803 13.5303C10.4874 13.8232 10.0126 13.8232 9.71967 13.5303L5.71967 9.53033C5.42678 9.23744 5.42678 8.76256 5.71967 8.46967Z"
 								fill="#4A4A4A" />
@@ -201,8 +206,8 @@
 				</div>
 
 
-				<div id="accordion" class="mt-5">
-					<div class="btn accordion-item p-5 d-flex ai-start show ease-in-3">
+				<div id="accordion" class="ease-in-3 pt-5">
+					<div class="btn accordion-item p-5 d-flex ai-start ease-in-3">
 						<div>
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
 								fill="none">
@@ -211,7 +216,7 @@
 							</svg>
 						</div>
 
-						<div class="accordion-item-body ml-3 d-flex jc-space-between">
+						<div class="accordion-item-body flex-fill ml-3 d-flex jc-space-between">
 							<div>
 								<div class="fw-600">Customize your online store</div>
 
@@ -227,7 +232,7 @@
 								</div>
 							</div>
 
-							<div class="accordion-item-image ease-3">
+							<div class="accordion-item-image ml-4 ease-3">
 								<img src="https://crushingit.tech/hackathon-assets/customise-store.png" alt="Image">
 							</div>
 						</div>
@@ -242,7 +247,7 @@
 							</svg>
 						</div>
 
-						<div class="accordion-item-body ml-3 d-flex jc-space-between">
+						<div class="accordion-item-body flex-fill ml-3 d-flex jc-space-between">
 							<div>
 								<div class="fw-600">Add your first product</div>
 
@@ -258,7 +263,7 @@
 								</div>
 							</div>
 
-							<div class="accordion-item-image ease-3">
+							<div class="accordion-item-image ml-4 ease-3">
 								<img src="https://crushingit.tech/hackathon-assets/product.png" alt="Image">
 							</div>
 						</div>
@@ -273,7 +278,7 @@
 							</svg>
 						</div>
 
-						<div class="accordion-item-body ml-3 d-flex jc-space-between">
+						<div class="accordion-item-body flex-fill ml-3 d-flex jc-space-between">
 							<div>
 								<div class="fw-600">Add a custom domain</div>
 
@@ -288,7 +293,7 @@
 								</div>
 							</div>
 
-							<div class="accordion-item-image ease-3">
+							<div class="accordion-item-image ml-4 ease-3">
 								<img src="https://crushingit.tech/hackathon-assets/website.png" alt="Image">
 							</div>
 						</div>
@@ -303,7 +308,7 @@
 							</svg>
 						</div>
 
-						<div class="accordion-item-body ml-3 d-flex jc-space-between">
+						<div class="accordion-item-body flex-fill ml-3 d-flex jc-space-between">
 							<div>
 								<div class="fw-600">Name your store</div>
 
@@ -317,7 +322,7 @@
 								</div>
 							</div>
 
-							<div class="accordion-item-image ease-3">
+							<div class="accordion-item-image ml-4 ease-3">
 								<img src="https://crushingit.tech/hackathon-assets/name-store.png" alt="Image">
 							</div>
 						</div>
@@ -332,7 +337,7 @@
 							</svg>
 						</div>
 
-						<div class="accordion-item-body ml-3 d-flex jc-space-between">
+						<div class="accordion-item-body flex-fill ml-3 d-flex jc-space-between">
 							<div>
 								<div class="fw-600">Set up a payment provider</div>
 
@@ -348,7 +353,7 @@
 								</div>
 							</div>
 
-							<div class="accordion-item-image ease-3">
+							<div class="accordion-item-image ml-4 ease-3">
 								<img src="https://crushingit.tech/hackathon-assets/payment.png" alt="Image">
 							</div>
 						</div>
