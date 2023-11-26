@@ -186,11 +186,12 @@
 						<div>Use this personalized guide to get your store up and running.</div>
 
 						<div class="mt-5 d-flex ai-center">
-							<div>1 / 5 completed</div>
+							<div><span id="completedCount">0</span> / 5 completed</div>
+
 							<svg class="ml-3" id="progress" xmlns="http://www.w3.org/2000/svg" width="72" height="4"
 								viewBox="0 0 72 4" fill="none">
 								<rect width="72" height="4" rx="2" fill="#E3E3E3" />
-								<rect width="18" height="4" fill="#1A1A1A" />
+								<rect id="progressIndicator" class="ease-in-3" height="4" fill="#1A1A1A" />
 							</svg>
 						</div>
 					</div>
@@ -209,11 +210,20 @@
 				<div id="accordion" class="ease-in-3 pt-5">
 					<div class="btn accordion-item p-5 d-flex ai-start ease-in-3">
 						<div>
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-								fill="none">
-								<circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
-									stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
-							</svg>
+							<button type="button" class="btn check-btn p-0">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+									fill="none" class="default-state">
+									<circle class="ease-in-3" cx="12" cy="12" r="10" stroke="#8A8A8A"
+										stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+								<svg class="active-tick" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+									viewBox="0 0 18 18" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M13.8162 5.64149C14.0603 5.88557 14.0603 6.2813 13.8162 6.52538L8.39954 11.942C8.15546 12.1861 7.75974 12.1861 7.51566 11.942L4.80733 9.23371C4.56325 8.98963 4.56325 8.5939 4.80733 8.34983C5.0514 8.10575 5.44713 8.10575 5.69121 8.34983L7.9576 10.6162L12.9323 5.64149C13.1764 5.39742 13.5721 5.39742 13.8162 5.64149Z"
+										fill="white" />
+								</svg>
+							</button>
+
 						</div>
 
 						<div class="accordion-item-body flex-fill ml-3 d-flex jc-space-between">
@@ -240,11 +250,20 @@
 
 					<div class="btn accordion-item p-5 d-flex ease-in-3">
 						<div>
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-								fill="none">
-								<circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
-									stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
-							</svg>
+							<button type="button" class="btn check-btn p-0">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+									fill="none" class="default-state">
+									<circle class="ease-in-3" cx="12" cy="12" r="10" stroke="#8A8A8A"
+										stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+								<svg class="active-tick" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+									viewBox="0 0 18 18" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M13.8162 5.64149C14.0603 5.88557 14.0603 6.2813 13.8162 6.52538L8.39954 11.942C8.15546 12.1861 7.75974 12.1861 7.51566 11.942L4.80733 9.23371C4.56325 8.98963 4.56325 8.5939 4.80733 8.34983C5.0514 8.10575 5.44713 8.10575 5.69121 8.34983L7.9576 10.6162L12.9323 5.64149C13.1764 5.39742 13.5721 5.39742 13.8162 5.64149Z"
+										fill="white" />
+								</svg>
+							</button>
+
 						</div>
 
 						<div class="accordion-item-body flex-fill ml-3 d-flex jc-space-between">
@@ -271,11 +290,20 @@
 
 					<div class="btn accordion-item p-5 d-flex ease-in-3">
 						<div>
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-								fill="none">
-								<circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
-									stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
-							</svg>
+							<button type="button" class="btn check-btn p-0">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+									fill="none" class="default-state">
+									<circle class="ease-in-3" cx="12" cy="12" r="10" stroke="#8A8A8A"
+										stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+								<svg class="active-tick" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+									viewBox="0 0 18 18" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M13.8162 5.64149C14.0603 5.88557 14.0603 6.2813 13.8162 6.52538L8.39954 11.942C8.15546 12.1861 7.75974 12.1861 7.51566 11.942L4.80733 9.23371C4.56325 8.98963 4.56325 8.5939 4.80733 8.34983C5.0514 8.10575 5.44713 8.10575 5.69121 8.34983L7.9576 10.6162L12.9323 5.64149C13.1764 5.39742 13.5721 5.39742 13.8162 5.64149Z"
+										fill="white" />
+								</svg>
+							</button>
+
 						</div>
 
 						<div class="accordion-item-body flex-fill ml-3 d-flex jc-space-between">
@@ -301,11 +329,20 @@
 
 					<div class="btn accordion-item p-5 d-flex ease-in-3">
 						<div>
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-								fill="none">
-								<circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
-									stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
-							</svg>
+							<button type="button" class="btn check-btn p-0">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+									fill="none" class="default-state">
+									<circle class="ease-in-3" cx="12" cy="12" r="10" stroke="#8A8A8A"
+										stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+								<svg class="active-tick" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+									viewBox="0 0 18 18" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M13.8162 5.64149C14.0603 5.88557 14.0603 6.2813 13.8162 6.52538L8.39954 11.942C8.15546 12.1861 7.75974 12.1861 7.51566 11.942L4.80733 9.23371C4.56325 8.98963 4.56325 8.5939 4.80733 8.34983C5.0514 8.10575 5.44713 8.10575 5.69121 8.34983L7.9576 10.6162L12.9323 5.64149C13.1764 5.39742 13.5721 5.39742 13.8162 5.64149Z"
+										fill="white" />
+								</svg>
+							</button>
+
 						</div>
 
 						<div class="accordion-item-body flex-fill ml-3 d-flex jc-space-between">
@@ -330,11 +367,20 @@
 
 					<div class="btn accordion-item p-5 d-flex ease-in-3">
 						<div>
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-								fill="none">
-								<circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
-									stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
-							</svg>
+							<button type="button" class="btn check-btn p-0">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+									fill="none" class="default-state">
+									<circle class="ease-in-3" cx="12" cy="12" r="10" stroke="#8A8A8A"
+										stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+								<svg class="active-tick" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+									viewBox="0 0 18 18" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M13.8162 5.64149C14.0603 5.88557 14.0603 6.2813 13.8162 6.52538L8.39954 11.942C8.15546 12.1861 7.75974 12.1861 7.51566 11.942L4.80733 9.23371C4.56325 8.98963 4.56325 8.5939 4.80733 8.34983C5.0514 8.10575 5.44713 8.10575 5.69121 8.34983L7.9576 10.6162L12.9323 5.64149C13.1764 5.39742 13.5721 5.39742 13.8162 5.64149Z"
+										fill="white" />
+								</svg>
+							</button>
+
 						</div>
 
 						<div class="accordion-item-body flex-fill ml-3 d-flex jc-space-between">
