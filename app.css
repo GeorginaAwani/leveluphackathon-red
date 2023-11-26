@@ -664,6 +664,10 @@ a {
 	.card {
 		border-radius: 0;
 	}
+
+	.accordion-item-image {
+		display: none !important;
+	}
 }
 
 #navbarTag>.dropdown>.btn {
