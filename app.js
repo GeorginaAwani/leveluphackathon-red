@@ -118,7 +118,7 @@ const TRANSITION_DURATION = 200;
 					button.classList.remove('loading');
 					button.classList.add('active');
 					countProgress();
-				}, (TRANSITION_DURATION * 3));
+				}, (TRANSITION_DURATION * 5));
 			}
 		});
 	});
