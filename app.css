@@ -545,6 +545,7 @@ svg {
 	font-size: var(--font-size-12);
 	font-weight: 500;
 	box-shadow: var(--btn-shadow);
+	outline: none;
 }
 
 .btn:hover {
@@ -557,8 +558,7 @@ svg {
 	box-shadow: var(--btn-shadow-focus);
 }
 
-.btn:active,
-.btn.active {
+.btn:active {
 	background-color: var(--btn-bg-active);
 	box-shadow: var(--btn-shadow-active);
 }
@@ -594,7 +594,7 @@ svg {
 .btn-light {
 	--btn-bg: #fff;
 	--btn-bg-hover: #E7E7E7;
-	--btn-bg-active: #E0E0E0;
+	--btn-bg-active: #F0F0F0;
 	--btn-bg-focus: #fff;
 	--btn-border: 1px solid transparent;
 	--btn-color: #323232;
@@ -686,7 +686,8 @@ a {
 	background-color: var(--gray-mid);
 }
 
-#navbarTag>.dropdown>.btn:active {
+#navbarTag>.dropdown>.btn:active,
+#navbarTag>.dropdown>.btn.active {
 	background-color: var(--gray-50);
 }
 
@@ -720,11 +721,19 @@ a {
 
 .dropdown-menu .dropdown-menu-item {
 	color: var(--font-dark);
+	outline: none;
+}
+
+.dropdown-menu .dropdown-menu-item:hover {
+	background-color: var(--bg-grey);
+}
+
+.dropdown-menu .dropdown-menu-item:active {
+	background-color: var(--state-active);
 }
 
 .dropdown-menu .dropdown-menu-item:focus {
 	box-shadow: 0px 0px 0px 2px var(--state-focus);
-	outline: none;
 }
 
 .dropdown-separator {
@@ -733,6 +742,7 @@ a {
 
 #headingMenuItem {
 	padding: 0.25rem 0.75rem 0.25rem 0.5rem;
+	margin-bottom: 0.25rem;
 }
 
 #alertDropdown {
@@ -851,7 +861,7 @@ a {
 }
 
 .check-btn.active {
-	--btn-bg-active: var(--purple);
+	background-color: var(--purple);
 	border-radius: 50rem;
 }
 
