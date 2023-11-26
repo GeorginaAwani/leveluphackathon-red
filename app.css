@@ -842,7 +842,7 @@ a {
 	}
 }
 
-.check-btn:hover .default-state {
+.check-btn:not(.active):hover .default-state {
 	stroke-dasharray: 0;
 }
 
